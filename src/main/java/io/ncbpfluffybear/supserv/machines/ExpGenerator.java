@@ -49,7 +49,7 @@ public class ExpGenerator extends SlimefunItem implements EnergyNetProvider {
     public ExpGenerator(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, item, recipeType, recipe);
 
-        new BlockMenuPreset(getId(), "&aExp Generator") {
+        new BlockMenuPreset(getId(), "&a经验生成器") {
 
             @Override
             public void init() {

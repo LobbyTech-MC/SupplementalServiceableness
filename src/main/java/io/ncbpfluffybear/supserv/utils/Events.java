@@ -28,8 +28,8 @@ public class Events implements Listener {
         e.setCancelled(true);
         Entity target = e.getRightClicked();
         if (target instanceof Player && WateringCan.updateUses((WateringCan) wateringCan, p, item, 3)) {
-            Utils.send(p, "&bSplash!");
-            Utils.send((Player) target, "&bYou were splashed by " + p.getDisplayName() + "!");
+            Utils.send(p, "&b啵!");
+            Utils.send((Player) target, "&b你被 " + p.getDisplayName() + "泼了一身水!");
             ((Player) target).addPotionEffect(new PotionEffect(PotionEffectType.SLOW, 60, 1));
         }
     }

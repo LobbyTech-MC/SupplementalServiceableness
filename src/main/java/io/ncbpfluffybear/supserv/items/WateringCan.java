@@ -208,7 +208,7 @@ public class WateringCan extends SimpleSlimefunItem<ItemUseHandler> implements N
         int remainingUses = meta.getPersistentDataContainer().getOrDefault(usageKey, PersistentDataType.INTEGER, 0);
 
         if (warnRefill && remainingUses < 1) {
-            Utils.send(p, "&cYou need to refill your Watering Can!");
+            Utils.send(p, "&c你需要重新装满你的喷壶!");
         }
 
         return remainingUses;
@@ -228,12 +228,12 @@ public class WateringCan extends SimpleSlimefunItem<ItemUseHandler> implements N
 
         } else if (updateType == 2) {
             p.playSound(p.getLocation(), Sound.ENTITY_DROWNED_DEATH_WATER, 0.5F, 1F);
-            Utils.send(p, "&aYou have filled your Watering Can");
+            Utils.send(p, "&a你已经装满了你的喷壶");
             usesLeft = can.canLevel.size();
 
         } else if (updateType == 3) {
             if (usesLeft == 0) {
-                Utils.send(p, "&cYou need to refill your Watering Can!");
+                Utils.send(p, "&c你需要重新装满你的喷壶!");
                 return false;
             }
             usesLeft = 0;
@@ -248,7 +248,7 @@ public class WateringCan extends SimpleSlimefunItem<ItemUseHandler> implements N
         }
          */
 
-        lore.set(USE_INDEX, ChatColors.color("&aUses Left: &e" + usesLeft));
+        lore.set(USE_INDEX, ChatColors.color("&a使用次数剩余: &e" + usesLeft));
         meta.setLore(lore);
         meta.getPersistentDataContainer().set(usageKey, PersistentDataType.INTEGER, usesLeft);
         item.setItemMeta(meta);

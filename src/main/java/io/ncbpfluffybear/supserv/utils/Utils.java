@@ -8,7 +8,7 @@ import org.bukkit.inventory.ItemStack;
 public class Utils {
 
     public static void send(Player p, String message) {
-        p.sendMessage(ChatColor.GREEN + "[SupplementalServiceableness] " + ChatColors.color(message));
+        p.sendMessage(ChatColor.GREEN + "[辅助物品] " + ChatColors.color(message));
     }
 
     public static void sendChatMsg(Player p, String message) {

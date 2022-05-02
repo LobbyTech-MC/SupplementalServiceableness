@@ -85,7 +85,7 @@ public class HeadGrinder extends SlimefunItem implements EnergyNetComponent {
     public HeadGrinder(ItemGroup itemGroup, SlimefunItemStack item, RecipeType recipeType, ItemStack[] recipe) {
         super(itemGroup, item, recipeType, recipe);
 
-        new BlockMenuPreset(getId(), "&4Head Grinder") {
+        new BlockMenuPreset(getId(), "&4头颅研磨器") {
 
             @Override
             public void init() {

@@ -67,7 +67,7 @@ public class Voltmeter extends SimpleSlimefunItem<ItemUseHandler> {
                         break;
                 }
 
-                Utils.sendChatMsg(player, "&5Selected mode: &7" + pretifyId(mode.toString()));
+                Utils.sendChatMsg(player, "&5选择模式: &7" + pretifyId(mode.toString()));
                 return;
             }
 
@@ -136,16 +136,16 @@ public class Voltmeter extends SimpleSlimefunItem<ItemUseHandler> {
             }
         }
 
-        Utils.sendChatMsg(player, "&7========== &5Consumers &7==========");
+        Utils.sendChatMsg(player, "&7========== &5用电器 &7==========");
         Utils.sendChatMsg(player, "");
-        Utils.sendChatMsg(player, "&5Number of consumers: &7" + numberOfConsumers);
-        Utils.sendChatMsg(player, "&5Joules consumed: &7" + joulesPerSecConsumed + " J/s");
-        Utils.sendChatMsg(player, "&5Smallest consumer: &7" +
-                (Objects.isNull(smallestConsumer) ? "None" : pretifyId(smallestConsumer.getId())) +
-                " &5with &7" + (Objects.isNull(smallestConsumer) ? "0" : minConsumption) + " J/s");
-        Utils.sendChatMsg(player, "&5Largest consumer: &7" +
-                (Objects.isNull(largestConsumer) ? "None" : pretifyId(largestConsumer.getId())) +
-                " &5with &7" + maxConsumption + " J/s");
+        Utils.sendChatMsg(player, "&5用电器数量: &7" + numberOfConsumers);
+        Utils.sendChatMsg(player, "&5用电速度: &7" + joulesPerSecConsumed + " J/s");
+        Utils.sendChatMsg(player, "&5最小用电器: &7" +
+                (Objects.isNull(smallestConsumer) ? "无" : pretifyId(smallestConsumer.getId())) +
+                " &5用电量为 &7" + (Objects.isNull(smallestConsumer) ? "0" : minConsumption) + " J/s");
+        Utils.sendChatMsg(player, "&5最大用电器: &7" +
+                (Objects.isNull(largestConsumer) ? "无" : pretifyId(largestConsumer.getId())) +
+                " &5用电量为 &7" + maxConsumption + " J/s");
         Utils.sendChatMsg(player, "");
         Utils.sendChatMsg(player, "&7===============================");
     }
@@ -190,18 +190,18 @@ public class Voltmeter extends SimpleSlimefunItem<ItemUseHandler> {
             }
         }
 
-        Utils.sendChatMsg(player, "&7========== &5Capacitors &7==========");
+        Utils.sendChatMsg(player, "&7========== &5电容器 &7==========");
         Utils.sendChatMsg(player, "");
-        Utils.sendChatMsg(player, "&5Number of capacitors: &7" + numberOfCapacitors);
-        Utils.sendChatMsg(player, "&5Capacity: &7" + capacity + " J");
-        Utils.sendChatMsg(player, "&5Current charge: &7" + charge + " J &o("
+        Utils.sendChatMsg(player, "&5电容器数量: &7" + numberOfCapacitors);
+        Utils.sendChatMsg(player, "&5电容器容量: &7" + capacity + " J");
+        Utils.sendChatMsg(player, "&5当前充电量: &7" + charge + " J &o("
                 + ((double) Math.round(((double) charge / capacity * 100) * 100) / 100) + "%)");
-        Utils.sendChatMsg(player, "&5Smallest capacitor: &7" +
-                (Objects.isNull(smallestCapacitor) ? "None" : pretifyId(smallestCapacitor.getId())) +
-                " &5with &7" + (Objects.isNull(smallestCapacitor) ? "0" : minCapacity) + " J");
-        Utils.sendChatMsg(player, "&5Largest capacitor: &7" +
-                (Objects.isNull(largestCapacitor) ? "None" : pretifyId(largestCapacitor.getId())) +
-                " &5with &7" + maxCapacity + " J");
+        Utils.sendChatMsg(player, "&5最小电容: &7" +
+                (Objects.isNull(smallestCapacitor) ? "无" : pretifyId(smallestCapacitor.getId())) +
+                " &5电容量为 &7" + (Objects.isNull(smallestCapacitor) ? "0" : minCapacity) + " J");
+        Utils.sendChatMsg(player, "&5最大电容 &7" +
+                (Objects.isNull(largestCapacitor) ? "无" : pretifyId(largestCapacitor.getId())) +
+                " &5电容量为 &7" + maxCapacity + " J");
         Utils.sendChatMsg(player, "");
         Utils.sendChatMsg(player, "&7===============================");
     }
@@ -264,16 +264,16 @@ public class Voltmeter extends SimpleSlimefunItem<ItemUseHandler> {
             }
         }
 
-        Utils.sendChatMsg(player, "&7========== &5Generators &7==========");
+        Utils.sendChatMsg(player, "&7========== &5发电机 &7==========");
         Utils.sendChatMsg(player, "");
-        Utils.sendChatMsg(player, "&5Number of capacitors: &7" + numberOfGenerators);
-        Utils.sendChatMsg(player, "&5Generated output: &7" + joulesGeneratedPerSec + " J/s");
-        Utils.sendChatMsg(player, "&5Smallest generator: &7" +
+        Utils.sendChatMsg(player, "&5发电机数量: &7" + numberOfGenerators);
+        Utils.sendChatMsg(player, "&5发电机发电量: &7" + joulesGeneratedPerSec + " J/s");
+        Utils.sendChatMsg(player, "&5最小发电机: &7" +
                 (Objects.isNull(smallestGenerator) ? "None" : pretifyId(smallestGenerator.getId())) +
-                " &5with &7" + (Objects.isNull(smallestGenerator) ? "0" : minGeneration) + " J/s");
-        Utils.sendChatMsg(player, "&5Largest capacitor: &7" +
+                " &5发电量为 &7" + (Objects.isNull(smallestGenerator) ? "0" : minGeneration) + " J/s");
+        Utils.sendChatMsg(player, "&5最大发电机: &7" +
                 (Objects.isNull(largestGenerator) ? "None" : pretifyId(largestGenerator.getId())) +
-                " &5with &7" + maxGeneration + " J/s");
+                " &5发电量为 &7" + maxGeneration + " J/s");
         Utils.sendChatMsg(player, "");
         Utils.sendChatMsg(player, "&7===============================");
     }
@@ -364,18 +364,18 @@ public class Voltmeter extends SimpleSlimefunItem<ItemUseHandler> {
             }
         }
 
-        Utils.sendChatMsg(player, "&7========== &5Charge &7==========");
+        Utils.sendChatMsg(player, "&7========== &5充电器 &7==========");
         Utils.sendChatMsg(player, "");
-        Utils.sendChatMsg(player, "&5Number of components: &7" + numberOfComponents);
-        Utils.sendChatMsg(player, "&5Capacity: &7" + capacity + " J");
-        Utils.sendChatMsg(player, "&5Current charge: &7" + charge + " J &o("
+        Utils.sendChatMsg(player, "&5充电器数量: &7" + numberOfComponents);
+        Utils.sendChatMsg(player, "&5电容量: &7" + capacity + " J");
+        Utils.sendChatMsg(player, "&5当前充电量: &7" + charge + " J &o("
                 + ((double) Math.round(((double) charge / capacity * 100) * 100) / 100) + "%)");
-        Utils.sendChatMsg(player, "&5Smallest charge: &7" +
-                (Objects.isNull(smallestChargeComponent) ? "None" : pretifyId(smallestChargeComponent.getId())) +
-                " &5with &7" + (Objects.isNull(smallestChargeComponent) ? "0" : minCharge) + " J");
-        Utils.sendChatMsg(player, "&5Largest charge: &7" +
+        Utils.sendChatMsg(player, "&5最小充电器: &7" +
+                (Objects.isNull(smallestChargeComponent) ? "无" : pretifyId(smallestChargeComponent.getId())) +
+                " &5充电量为 &7" + (Objects.isNull(smallestChargeComponent) ? "0" : minCharge) + " J");
+        Utils.sendChatMsg(player, "&5最大充电器: &7" +
                 (Objects.isNull(largestChargeComponent) ? "None" : pretifyId(largestChargeComponent.getId())) +
-                " &5with &7" + maxCharge + " J");
+                " &5充电量为 &7" + maxCharge + " J");
         Utils.sendChatMsg(player, "");
         Utils.sendChatMsg(player, "&7============================");
     }
@@ -467,12 +467,12 @@ public class Voltmeter extends SimpleSlimefunItem<ItemUseHandler> {
 
         String generatorsList = sb.toString();
 
-        Utils.sendChatMsg(player, "&7========== &5Components &7==========");
+        Utils.sendChatMsg(player, "&7========== &5电力组件 &7==========");
         Utils.sendChatMsg(player, "");
-        Utils.sendChatMsg(player, "&5Number of components: &7" + numberOfComponents);
-        Utils.sendChatMsg(player, "&5Consumers: &7" + consumersList.substring(0, consumersList.length() - 6));
-        Utils.sendChatMsg(player, "&5Capacitors: &7" + capacitorsList.substring(0, capacitorsList.length() - 6));
-        Utils.sendChatMsg(player, "&5Generators: &7" + generatorsList.substring(0, generatorsList.length() - 6));
+        Utils.sendChatMsg(player, "&5电力组件数量: &7" + numberOfComponents);
+        Utils.sendChatMsg(player, "&5用电量: &7" + consumersList.substring(0, consumersList.length() - 6));
+        Utils.sendChatMsg(player, "&5电容量: &7" + capacitorsList.substring(0, capacitorsList.length() - 6));
+        Utils.sendChatMsg(player, "&5发电量: &7" + generatorsList.substring(0, generatorsList.length() - 6));
         Utils.sendChatMsg(player, "");
         Utils.sendChatMsg(player, "&7============================");
     }

@@ -54,7 +54,7 @@ public class Baler extends AContainer implements RecipeDisplayItem {
     @Nonnull
     @Override
     public String getInventoryTitle() {
-        return "&eBaler";
+        return "&e打包机";
     }
 
     @Override
