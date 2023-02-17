@@ -139,13 +139,13 @@ public class Voltmeter extends SimpleSlimefunItem<ItemUseHandler> {
         Utils.sendChatMsg(player, "&7========== &5用电器 &7==========");
         Utils.sendChatMsg(player, "");
         Utils.sendChatMsg(player, "&5用电器数量: &7" + numberOfConsumers);
-        Utils.sendChatMsg(player, "&5用电速度: &7" + joulesPerSecConsumed + " J/s");
+        Utils.sendChatMsg(player, "&5用电速度: &7" + joulesPerSecConsumed + " J/t");
         Utils.sendChatMsg(player, "&5最小用电器: &7" +
                 (Objects.isNull(smallestConsumer) ? "无" : pretifyId(smallestConsumer.getId())) +
-                " &5用电量为 &7" + (Objects.isNull(smallestConsumer) ? "0" : minConsumption) + " J/s");
-        Utils.sendChatMsg(player, "&5最大用电器: &7" +
+                " &5用电量为 &7" + (Objects.isNull(smallestConsumer) ? "0" : minConsumption) + " J/t");
+        Utils.sendChatMsg(player, "&5Largest consumer: &7" +
                 (Objects.isNull(largestConsumer) ? "无" : pretifyId(largestConsumer.getId())) +
-                " &5用电量为 &7" + maxConsumption + " J/s");
+                " &5用电量为 &7" + maxConsumption + " J/t");
         Utils.sendChatMsg(player, "");
         Utils.sendChatMsg(player, "&7===============================");
     }
@@ -267,13 +267,13 @@ public class Voltmeter extends SimpleSlimefunItem<ItemUseHandler> {
         Utils.sendChatMsg(player, "&7========== &5发电机 &7==========");
         Utils.sendChatMsg(player, "");
         Utils.sendChatMsg(player, "&5发电机数量: &7" + numberOfGenerators);
-        Utils.sendChatMsg(player, "&5发电机发电量: &7" + joulesGeneratedPerSec + " J/s");
+        Utils.sendChatMsg(player, "&5发电机发电量: &7" + joulesGeneratedPerSec + " J/t");
         Utils.sendChatMsg(player, "&5最小发电机: &7" +
-                (Objects.isNull(smallestGenerator) ? "None" : pretifyId(smallestGenerator.getId())) +
-                " &5发电量为 &7" + (Objects.isNull(smallestGenerator) ? "0" : minGeneration) + " J/s");
+                (Objects.isNull(smallestGenerator) ? "无" : pretifyId(smallestGenerator.getId())) +
+                " &5发电量为 &7" + (Objects.isNull(smallestGenerator) ? "0" : minGeneration) + " J/t");
         Utils.sendChatMsg(player, "&5最大发电机: &7" +
-                (Objects.isNull(largestGenerator) ? "None" : pretifyId(largestGenerator.getId())) +
-                " &5发电量为 &7" + maxGeneration + " J/s");
+                (Objects.isNull(largestGenerator) ? "无" : pretifyId(largestGenerator.getId())) +
+                " &5发电量为 &7" + maxGeneration + " J/t");
         Utils.sendChatMsg(player, "");
         Utils.sendChatMsg(player, "&7===============================");
     }
