@@ -27,7 +27,7 @@ import java.util.Objects;
 import java.util.Optional;
 import java.util.logging.Level;
 
-@SuppressWarnings({"unchecked", "unsafe"})
+@SuppressWarnings({"unchecked"})
 public class Voltmeter extends SimpleSlimefunItem<ItemUseHandler> {
 
     enum VoltmeterMode {CONSUMERS, CAPACITORS, GENERATORS, CHARGE, COMPONENTS}
