@@ -1,5 +1,10 @@
 package io.ncbpfluffybear.supserv;
 
+import javax.annotation.Nonnull;
+
+import org.bukkit.Material;
+import org.bukkit.inventory.ItemStack;
+
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
@@ -18,10 +23,6 @@ import io.ncbpfluffybear.supserv.machines.ExpGenerator;
 import io.ncbpfluffybear.supserv.machines.HeadGrinder;
 import io.ncbpfluffybear.supserv.objects.NonInteractableItem;
 import io.ncbpfluffybear.supserv.utils.Utils;
-import org.bukkit.Material;
-import org.bukkit.inventory.ItemStack;
-
-import javax.annotation.Nonnull;
 
 public class SupServItemSetup {
 

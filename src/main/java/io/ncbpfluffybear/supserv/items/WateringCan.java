@@ -1,22 +1,10 @@
 package io.ncbpfluffybear.supserv.items;
 
-import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.api.items.settings.DoubleRangeSetting;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.core.attributes.NotPlaceable;
-import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
-import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun4.implementation.items.SimpleSlimefunItem;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.common.ChatColors;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.protection.Interaction;
-import io.ncbpfluffybear.supserv.SupServPlugin;
-import io.ncbpfluffybear.supserv.utils.Constants;
-import io.ncbpfluffybear.supserv.utils.Utils;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
+
 import javax.annotation.Nonnull;
-import me.mrCookieSlime.Slimefun.api.BlockStorage;
+
 import org.bukkit.Effect;
 import org.bukkit.FluidCollisionMode;
 import org.bukkit.Location;
@@ -35,6 +23,21 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.util.RayTraceResult;
+
+import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun4.api.items.settings.DoubleRangeSetting;
+import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun4.core.attributes.NotPlaceable;
+import io.github.thebusybiscuit.slimefun4.core.handlers.ItemUseHandler;
+import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun4.implementation.items.SimpleSlimefunItem;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.common.ChatColors;
+import io.github.thebusybiscuit.slimefun4.libraries.dough.protection.Interaction;
+import io.ncbpfluffybear.supserv.SupServPlugin;
+import io.ncbpfluffybear.supserv.utils.Constants;
+import io.ncbpfluffybear.supserv.utils.Utils;
+import me.mrCookieSlime.Slimefun.api.BlockStorage;
 
 public class WateringCan extends SimpleSlimefunItem<ItemUseHandler> implements NotPlaceable {
 
